@@ -1,0 +1,85 @@
+
+
+
+
+
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
+*.tmp.*
+log.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.sourcemaps/
+npm-debug.log*
+.idea/
+.sass-cache/
+.tmp/
+.versions/
+coverage/
+tmp/
+temp/
+hooks/
+$RECYCLE.BIN/
+
+
+node_modules/
+platforms/
+
+
+
+
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+
+
+*.iml
+.gradle
+/.idea
+/local.properties
+/.idea
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/captures
+
+
+## Build generated
+
+DerivedData
+build.xcarchive
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.apk
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Checkouts
+Carthage/Build
