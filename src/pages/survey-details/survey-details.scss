@@ -1,0 +1,37 @@
+page-survey-details {
+    .submit-button {
+        margin-left: 25%; 
+    }
+
+    .content-md {
+        color: #000;
+        background-color: burlywood;
+    }
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: white;
+    }
+    .toolbar-md {
+        padding: 4px;
+        min-height: 56px;
+        background-color: black;
+        color: white;
+    }
+    .label-md-primary, .item-input .label-md-primary, .item-select .label-md-primary, .item-datetime .label-md-primary {
+        color: brown;
+        font-weight: 500;
+    }
+    .item-input-has-focus .label-md[stacked], .input-has-focus .label-md[stacked], .item-input-has-focus .label-md[floating], .input-has-focus .label-md[floating] {
+        color: cadetblue;
+        font-weight: 500;
+    }
+    .item-label-stacked .text-input-md, .item-label-floating .text-input-md {
+        margin-left: 0;
+        margin-top: 8px;
+        color: brown;
+        margin-bottom: 8px;
+        width: calc(100% - 8px);
+    }
+}

@@ -26,7 +26,12 @@ export class HomePage {
   	this.afAuth.auth.signOut();
   	this.navCtrl.setRoot(LoginPage);
     this.loadingProvider.stopLoading();
-
   }
+
+  private navigateToSurveyPage(_cardClicked) {
+    console.log(_cardClicked);
+    this.navCtrl.push('SurveyDetailsPage',{'cardClicked' : _cardClicked});
+  }
+
 
 }

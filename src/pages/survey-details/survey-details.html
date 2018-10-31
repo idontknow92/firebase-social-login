@@ -1,0 +1,86 @@
+<!--
+  Generated template for the SurveyDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Coaching Survey</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-item no-lines>
+      <ion-label color="primary" floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-label color="primary" floating>Phone</ion-label>
+      <ion-input type="number" [(ngModel)]="user.phone"></ion-input>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-label color="primary" floating>Alternate Phone</ion-label>
+      <ion-input type="number" [(ngModel)]="user.altPhone"></ion-input>
+    </ion-item>
+    <ion-item no-lines>
+      <ion-label color="primary" floating> Coaching Opted For</ion-label>
+      <ion-input type="text" [(ngModel)]="user.coachingOptFor"  [disabled]="true"></ion-input>
+    </ion-item>
+
+    <ion-list radio-group [(ngModel)]="user.client" no-lines>
+      <ion-list-header text-wrap no-lines>
+        If you are choosing this coaching service for school student, confirm that you are a parent/teacher of the
+        client:
+      </ion-list-header>
+
+      <ion-item no-lines>
+        <ion-label>Parent</ion-label>
+        <ion-radio value="parent"></ion-radio>
+      </ion-item>
+
+      <ion-item no-lines>
+        <ion-label>Teacher</ion-label>
+        <ion-radio value="teacher"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <ion-item no-lines>
+      <ion-label floating text-wrap>Describe what is the expectation you have from the coaching service:</ion-label>
+      <ion-textarea id="myInput" rows="6" maxLength="500" [(ngModel)]="user.expectation"></ion-textarea>
+    </ion-item>
+
+    <ion-list radio-group [(ngModel)]="user.timeLine" no-lines>
+      <ion-list-header no-lines text-wrap>
+        What is the time line you are looking for starting the coaching:
+      </ion-list-header>
+      <ion-item no-lines>
+        <ion-label>Immediate</ion-label>
+        <ion-radio value="immediate"></ion-radio>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>In next 2 weeks</ion-label>
+        <ion-radio value="2weeks"></ion-radio>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>In next 1 month</ion-label>
+        <ion-radio value="1month"></ion-radio>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Beyond 1 month</ion-label>
+        <ion-radio value="beyondMonth"></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+    <button class="submit-button" ion-button (click) = "submitData()" align = "center" round color="danger"> Submit Survey </button>
+
+  </ion-list>
+
+
+</ion-content>

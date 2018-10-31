@@ -27,28 +27,28 @@
   
   <ion-content class="card-background-page">
 
-    <ion-card>
+    <ion-card (click)="navigateToSurveyPage('personalCoaching')" >
        <div class="card-title">Personal Coaching</div>
       <img src="assets/imgs/personal-coaching.jpg"/>
       
       <!-- <div class="card-subtitle">41 Listings</div> --> 
     </ion-card>
   
-    <ion-card>
+    <ion-card (click)="navigateToSurveyPage('careerCoaching')">
       <div class="card-title">Career Coaching</div>
       <img src="assets/imgs/career-coaching.jpg"/>
       <!-- <div class="card-title">Amsterdam</div>
       <div class="card-subtitle">64 Listings</div> -->
     </ion-card>
   
-    <ion-card>
+    <ion-card (click)="navigateToSurveyPage('studentCoaching')">
         <div class="card-title">Student Coaching</div>
       <img src="assets/imgs/student-coaching.jpg"/>
       <!-- <div class="card-title">San Francisco</div>
       <div class="card-subtitle">72 Listings</div> -->
     </ion-card>
   
-    <ion-card>
+    <ion-card (click)="navigateToSurveyPage('corporateCoaching')">
         <div class="card-title">Corporate Coaching</div>
       <img src="assets/imgs/corporate-coaching.jpg"/>
       <!-- <div class="card-title">Madison</div>

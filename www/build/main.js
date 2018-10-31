@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([4],{
 
 /***/ 139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6,7 +6,7 @@ webpackJsonp([3],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ForgetPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_firebase__ = __webpack_require__(209);
@@ -72,7 +72,7 @@ var ForgetPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-forget',template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/forget/forget.html"*/'\n\n<ion-content class="bg-img">\n  <div class="main-content">\n    <div padding text-center class="container-logo" margin-bottom >\n      <img src="assets/imgs/logo.png">\n    </div>\n    <div padding text-center class="form-bottom-text">\n      <h3> Reset Password</h3>\n      <label>Enter the email address associated with your account,and review your email.</label>\n    </div>\n    <div text-center class="socialLogin" padding></div>\n      <div padding style="width: 100%;">\n      <form [formGroup]="authForm" (ngSubmit)="forgetPassword(forgetData.email)">\n\n        <div class="errormsg">\n          <div *ngIf="email.errors && email.touched"><p>Email is required.</p></div>\n        </div>\n\n        <ion-list>\n          <ion-item >\n            <ion-label><ion-icon ios="ios-mail" md="md-mail"></ion-icon></ion-label>\n            <ion-input [(ngModel)]="forgetData.email" [formControl]="email" id="email" type="email" required placeholder="Email *"></ion-input>\n          </ion-item>\n        </ion-list>\n        <button type="submit" ion-button full color="dark" [disabled]="!authForm.valid">Send</button>\n      </form>\n\n      <div padding text-center class="form-bottom-text">\n        <label>\n          <a href="javascript:void(0);" (click)="moveToLogin()">Back to Login</a>\n        </label>\n      </div>\n\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/forget/forget.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
     ], ForgetPage);
     return ForgetPage;
 }());
@@ -87,7 +87,7 @@ var ForgetPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__ = __webpack_require__(240);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(242);
@@ -279,7 +279,7 @@ var RegisterPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-register',template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/register/register.html"*/'\n\n<ion-content class="bg-img">\n  <div class="main-content">\n    <div padding text-center class="container-logo">\n      <img src="assets/imgs/logo.png">\n    </div>\n\n    <div padding  style="width: 100%;">\n    <form [formGroup]="authForm">\n      <div class="errormsg">\n        <div *ngIf="username.errors && username.touched">\n          <p>Username is required.</p>\n        </div>\n        <div class="error-box" *ngIf="email.errors && email.touched">\n          <p>Email is required.</p>\n        </div>\n        <div *ngIf="password.errors && password.touched">\n          <p>Password is required.</p>\n        </div>\n        <div *ngIf="cnfpass.errors && cnfpass.touched">\n          <p>Confirm password is required.</p>\n        </div>\n      </div>\n      <ion-list>\n        <ion-item padding-right>\n          <ion-label><ion-icon ios="ios-person" md="md-person"></ion-icon></ion-label>\n          <ion-input [(ngModel)]="regData.name" [formControl]="username" id="username" type="text" required placeholder="Username *"></ion-input>\n        </ion-item>\n\n         <ion-item>\n          <ion-label><ion-icon ios="ios-mail" md="md-mail"></ion-icon></ion-label>\n          <ion-input [(ngModel)]="regData.mail" [formControl]="email" id="email" type="email" required placeholder="Email *"></ion-input>\n        </ion-item>\n\n        <ion-item>\n          <ion-label><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-label>\n          <ion-input [(ngModel)]="regData.pass" [formControl]="password" id="password" type="{{passwordtype}}" required placeholder="Password *"></ion-input>\n          <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managePassword()"><ion-icon name="{{passeye}}"></ion-icon></button>\n        </ion-item>\n\n        <ion-item>\n          <ion-label><ion-icon ios="ios-unlock" md="md-unlock"></ion-icon></ion-label>\n          <ion-input [(ngModel)]="regData.cnfpass" [formControl]="cnfpass" id="cnfpass" type="{{cnfpasswordtype}}" required placeholder="Confirm Password *"></ion-input>\n          <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managecnfPassword()"><ion-icon name="{{cnfpasseye}}"></ion-icon></button>\n        </ion-item>\n      </ion-list>\n      <button ion-button full color="dark" [disabled]="!authForm.valid" (click)="doRegister(regData)">Sign up</button>\n    </form>\n    <div class="sepretor-or" padding-horizontal> <p>Or</p></div>\n    <div padding text-center class="form-bottom-text">\n        <label>Sign up with </label>\n        </div>\n    <div text-center class="socialLogin" padding>\n      <button ion-button class="google" (click)="socialLogin(\'google\')"><ion-icon name="logo-google" style="margin-right: 12px;"></ion-icon>Google</button>\n      <button ion-button class="facebook" (click)="socialLogin(\'facebook\')"><ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Facebook</button>\n    </div>\n    <div padding text-center class="form-bottom-text">\n      <label> Already have an Account? <a href="javascript:void(0);" (click)="moveToLogin()"> Sign In </a> </label>\n    </div>\n  </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/register/register.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_path__["a" /* FilePath */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_8__providers_loading_loading__["a" /* LoadingProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file_path__["a" /* FilePath */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_8__providers_loading_loading__["a" /* LoadingProvider */]])
     ], RegisterPage);
     return RegisterPage;
 }());
@@ -310,15 +310,19 @@ webpackEmptyAsyncContext.id = 151;
 
 var map = {
 	"../pages/forget/forget.module": [
-		468,
-		2
+		469,
+		3
 	],
 	"../pages/login/login.module": [
-		469,
-		1
+		470,
+		2
 	],
 	"../pages/register/register.module": [
-		470,
+		471,
+		1
+	],
+	"../pages/survey-details/survey-details.module": [
+		472,
 		0
 	]
 };
@@ -344,7 +348,7 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_loading_loading__ = __webpack_require__(76);
@@ -377,11 +381,15 @@ var HomePage = /** @class */ (function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
         this.loadingProvider.stopLoading();
     };
+    HomePage.prototype.navigateToSurveyPage = function (_cardClicked) {
+        console.log(_cardClicked);
+        this.navCtrl.push('SurveyDetailsPage', { 'cardClicked': _cardClicked });
+    };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/home/home.html"*/'<!-- <ion-header class="header-main">\n  <ion-navbar color="dark">\n    <ion-title>\n    {{userData.email}}\n    </ion-title>\n    <ion-buttons>\n	    <button ion-button clear (click)="logout()">\n	      	<ion-icon name="md-exit"></ion-icon>\n	    </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-header class="header-main">\n  <ion-navbar >\n    <ion-title >\n    <!-- <p class="color-txt">{{userData.email}}</p> -->\n    <p class="color-txt"> SERVICES </p>\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only class="header-btn" (click)="logout()">\n        <ion-icon name="md-log-out"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n  \n  <ion-content class="card-background-page">\n\n    <ion-card>\n       <div class="card-title">Personal Coaching</div>\n      <img src="assets/imgs/personal-coaching.jpg"/>\n      \n      <!-- <div class="card-subtitle">41 Listings</div> --> \n    </ion-card>\n  \n    <ion-card>\n      <div class="card-title">Career Coaching</div>\n      <img src="assets/imgs/career-coaching.jpg"/>\n      <!-- <div class="card-title">Amsterdam</div>\n      <div class="card-subtitle">64 Listings</div> -->\n    </ion-card>\n  \n    <ion-card>\n        <div class="card-title">Student Coaching</div>\n      <img src="assets/imgs/student-coaching.jpg"/>\n      <!-- <div class="card-title">San Francisco</div>\n      <div class="card-subtitle">72 Listings</div> -->\n    </ion-card>\n  \n    <ion-card>\n        <div class="card-title">Corporate Coaching</div>\n      <img src="assets/imgs/corporate-coaching.jpg"/>\n      <!-- <div class="card-title">Madison</div>\n      <div class="card-subtitle">28 Listings</div> -->\n    </ion-card>\n  \n\n</ion-content>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/home/home.html"*/'<!-- <ion-header class="header-main">\n  <ion-navbar color="dark">\n    <ion-title>\n    {{userData.email}}\n    </ion-title>\n    <ion-buttons>\n	    <button ion-button clear (click)="logout()">\n	      	<ion-icon name="md-exit"></ion-icon>\n	    </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header> -->\n\n<ion-header class="header-main">\n  <ion-navbar >\n    <ion-title >\n    <!-- <p class="color-txt">{{userData.email}}</p> -->\n    <p class="color-txt"> SERVICES </p>\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only class="header-btn" (click)="logout()">\n        <ion-icon name="md-log-out"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n  \n  <ion-content class="card-background-page">\n\n    <ion-card (click)="navigateToSurveyPage(\'personalCoaching\')" >\n       <div class="card-title">Personal Coaching</div>\n      <img src="assets/imgs/personal-coaching.jpg"/>\n      \n      <!-- <div class="card-subtitle">41 Listings</div> --> \n    </ion-card>\n  \n    <ion-card (click)="navigateToSurveyPage(\'careerCoaching\')">\n      <div class="card-title">Career Coaching</div>\n      <img src="assets/imgs/career-coaching.jpg"/>\n      <!-- <div class="card-title">Amsterdam</div>\n      <div class="card-subtitle">64 Listings</div> -->\n    </ion-card>\n  \n    <ion-card (click)="navigateToSurveyPage(\'studentCoaching\')">\n        <div class="card-title">Student Coaching</div>\n      <img src="assets/imgs/student-coaching.jpg"/>\n      <!-- <div class="card-title">San Francisco</div>\n      <div class="card-subtitle">72 Listings</div> -->\n    </ion-card>\n  \n    <ion-card (click)="navigateToSurveyPage(\'corporateCoaching\')">\n        <div class="card-title">Corporate Coaching</div>\n      <img src="assets/imgs/corporate-coaching.jpg"/>\n      <!-- <div class="card-title">Madison</div>\n      <div class="card-subtitle">28 Listings</div> -->\n    </ion-card>\n  \n\n</ion-content>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_loading_loading__["a" /* LoadingProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_loading_loading__["a" /* LoadingProvider */]])
     ], HomePage);
     return HomePage;
 }());
@@ -390,13 +398,13 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 296:
+/***/ 297:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(297);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(317);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -404,7 +412,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 316:
+/***/ 317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -412,29 +420,31 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_path__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__ = __webpack_require__(441);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_facebook__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(442);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(239);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_login_login__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_register_register__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_forget_forget__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_angularfire2__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__ = __webpack_require__(443);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_loading_loading__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_email_composer__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_path__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_file_transfer__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_facebook__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_home_home__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_login_login__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_register_register__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_forget_forget__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_angularfire2__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_angularfire2_database__ = __webpack_require__(444);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_angularfire2_auth__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_loading_loading__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -469,43 +479,45 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_register_register__["a" /* RegisterPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_forget_forget__["a" /* ForgetPage */]
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_register_register__["a" /* RegisterPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_forget_forget__["a" /* ForgetPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/forget/forget.module#ForgetPageModule', name: 'ForgetPage', segment: 'forget', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/survey-details/survey-details.module#SurveyDetailsPageModule', name: 'SurveyDetailsPage', segment: 'survey-details', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_15_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-                __WEBPACK_IMPORTED_MODULE_16_angularfire2_database__["a" /* AngularFireDatabaseModule */],
-                __WEBPACK_IMPORTED_MODULE_17_angularfire2_auth__["b" /* AngularFireAuthModule */]
+                __WEBPACK_IMPORTED_MODULE_16_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+                __WEBPACK_IMPORTED_MODULE_17_angularfire2_database__["a" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_18_angularfire2_auth__["b" /* AngularFireAuthModule */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_register_register__["a" /* RegisterPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_forget_forget__["a" /* ForgetPage */]
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_register_register__["a" /* RegisterPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_forget_forget__["a" /* ForgetPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_file__["a" /* File */],
-                __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_path__["a" /* FilePath */],
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_transfer__["a" /* FileTransfer */],
-                __WEBPACK_IMPORTED_MODULE_9__ionic_native_facebook__["a" /* Facebook */],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_7__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_file_path__["a" /* FilePath */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_file_transfer__["a" /* FileTransfer */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_facebook__["a" /* Facebook */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_18__providers_loading_loading__["a" /* LoadingProvider */]
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_19__providers_loading_loading__["a" /* LoadingProvider */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_email_composer__["a" /* EmailComposer */]
             ]
         })
     ], AppModule);
@@ -516,13 +528,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 442:
+/***/ 443:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(46);
@@ -554,7 +566,7 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -569,7 +581,7 @@ var MyApp = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register__ = __webpack_require__(140);
@@ -737,7 +749,7 @@ var LoginPage = /** @class */ (function () {
             selector: 'page-login',template:/*ion-inline-start:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/login/login.html"*/'<!--\n<ion-header>\n\n  <ion-navbar color="dark">\n    <ion-title>\n    <ion-icon name="md-contact"></ion-icon>\n    &nbsp;Sign In</ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content class="bg-img">\n\n  <div class="main-content">\n    <div padding text-center class="container-logo">\n      <img src="assets/imgs/logo.png">\n    </div>\n    <div text-center class="socialLogin" padding>\n      <button ion-button full class="google" (click)="socialLogin(\'google\')"><ion-icon name="logo-google" style="margin-right: 12px;"></ion-icon>Sign in with Google</button>\n      <button ion-button full class="facebook" (click)="socialLogin(\'facebook\')"><ion-icon name="logo-facebook" style="margin-right: 12px;"></ion-icon> Sign in with Facebook</button>\n    </div>\n    <div class="sepretor-or" padding-horizontal> <p>Or</p></div>\n\n    <div padding class="container-bottom">\n    <form [formGroup]="authForm" (ngSubmit)="userLogin(loginData)">\n\n      <div class="errormsg">\n        <div *ngIf="email.errors && email.touched">\n            <p>Email is required.</p>\n        </div>\n        <div *ngIf="password.errors && password.touched">\n            <p>Password is required.</p>\n        </div>\n      </div>\n\n        <ion-list>\n          <ion-item padding-right>\n            <ion-label>\n              <ion-icon ios="ios-mail" md="md-mail"></ion-icon>\n            </ion-label>\n            <ion-input [(ngModel)]="loginData.email" [formControl]="email" id="email" type="text" required placeholder="Email *"></ion-input>\n          </ion-item>\n          <ion-item>\n            <ion-label>\n              <ion-icon ios="ios-unlock" md="md-unlock"></ion-icon>\n            </ion-label>\n              <ion-input [(ngModel)]="loginData.password" [formControl]="password" id="password" type="{{passwordtype}}" required placeholder="Password *"></ion-input>\n            <button ion-button clear class="eye-icon-btn" type="button" item-right (click)="managePassword()"><ion-icon name="{{passeye}}"></ion-icon></button>\n          </ion-item>\n        </ion-list>\n        <button type="submit" ion-button full color="dark" [disabled]="!authForm.valid">Sign In</button>\n    </form>\n    <div padding text-center class="form-bottom-text" ><a href="javascript:void(0);" (click)="forgetpassword()"> Forgot password?</a></div>\n        <div padding text-center class="form-bottom-text">\n          <label>Don\'t have an Account? <a href="javascript:void(0);" (click)="moveToRegister()">Sign up</a></label>\n        </div>\n\n  </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/pusapro1/Documents/sample_project/POC/firebase-social-login/src/pages/login/login.html"*/,
             providers: []
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_8__providers_loading_loading__["a" /* LoadingProvider */], __WEBPACK_IMPORTED_MODULE_9__ionic_native_facebook__["a" /* Facebook */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_8__providers_loading_loading__["a" /* LoadingProvider */], __WEBPACK_IMPORTED_MODULE_9__ionic_native_facebook__["a" /* Facebook */]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -752,7 +764,7 @@ var LoginPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadingProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -785,7 +797,7 @@ var LoadingProvider = /** @class */ (function () {
     };
     LoadingProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]])
     ], LoadingProvider);
     return LoadingProvider;
 }());
@@ -794,5 +806,5 @@ var LoadingProvider = /** @class */ (function () {
 
 /***/ })
 
-},[296]);
+},[297]);
 //# sourceMappingURL=main.js.map
